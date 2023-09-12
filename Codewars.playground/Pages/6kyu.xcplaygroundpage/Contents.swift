@@ -12,10 +12,10 @@ func findIt(_ seq: [Int]) -> Int {
     
     for integer in seq {
         let value = dictionary[integer]
-        if value == nil {
-            dictionary[integer] = 1
+        if let value = dictionary[integer] {
+            dictionary[integer] = value + 1
         } else {
-            dictionary[integer]! += 1
+            dictionary[integer] = 1
         }
     }
     

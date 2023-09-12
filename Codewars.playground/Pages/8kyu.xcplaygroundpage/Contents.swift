@@ -84,3 +84,14 @@ func checkForFactor(_ base: Int, _ factor: Int) -> Bool {
 }
 
 checkForFactor(9, 2)
+
+//Challenge 7
+//Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+func digitize(_ num:Int) -> [Int] {
+    let numbers = num
+    let numArray = String(numbers).compactMap { Int(String($0)) }
+    return numArray.reversed()
+}
+
+digitize(12345)
