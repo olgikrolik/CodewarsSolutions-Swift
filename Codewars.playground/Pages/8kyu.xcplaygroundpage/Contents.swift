@@ -95,3 +95,14 @@ func digitize(_ num:Int) -> [Int] {
 }
 
 digitize(12345)
+
+//Challenge 8
+//We need a function that can transform a number (integer) into a string.
+//What ways of achieving this do you know?
+
+func numberToString(number: Int) -> String {
+    return String(number)
+}
+
+numberToString(number: 55)
+
