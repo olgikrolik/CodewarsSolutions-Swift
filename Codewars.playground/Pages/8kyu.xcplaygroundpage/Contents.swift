@@ -106,3 +106,38 @@ func numberToString(number: Int) -> String {
 
 numberToString(number: 55)
 
+//Challenge 9
+//This is an easy twist to the example kata (provided by Codewars when learning how to create your own kata).
+//Add the value "codewars" to the array websites 1,000 times.
+
+let websites = Array(repeating: "codewars", count: 1000)
+
+//Challenge 10
+//Create a function take that takes an Array<Int> and an Int, n, and returns an Array<Int> containing the first up to n elements from the array.
+
+func take(_ arr: [Int], _ n: Int) -> [Int] {
+    var newArray: [Int] = []
+    
+    if arr.count < n {
+        return arr
+    }
+    
+    for index in 0...n {
+        newArray.append(arr[index])
+    }
+        
+    return newArray
+}
+take([1,2,3,5,6,7,9], 4)
+
+//2nd solution
+//func take(_ arr: [Int], _ n: Int) -> [Int] {
+//
+//    if arr.count < n {
+//        return arr
+//    } else {
+//        return Array(arr[0..<n])
+//    }
+//}
+
+

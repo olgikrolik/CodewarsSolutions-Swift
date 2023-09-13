@@ -50,4 +50,32 @@ func disemvowel(_ s: String) -> String {
 
 disemvowel("Hello there")
 
+//Challenge 3
+//Write a method that will search an array of strings for all strings that contain another string, ignoring capitalization. Then return an array of the found strings.
+//The method takes two parameters, the query string and the array of strings to search, and returns an array.
+//If the string isn't contained in any of the strings in the array, the method returns an array containing a single string: "Empty" (or Nothing in Haskell, or "None" in Python and C)
+//Examples
+//If the string to search for is "me", and the array to search is ["home", "milk", "Mercury", "fish"], the method should return ["home", "Mercury"].
+
+func wordSearch(_ str:String, _ arr:[String]) -> [String] {
+    let stringArray = arr
+    let searchString = str
+    let lowercasedStr = searchString.lowercased()
+    
+    var result: [String] = []
+    
+    for string in stringArray {
+        if string.lowercased().contains(lowercasedStr) {
+            result.append(string)
+        }
+    }
+    if result.isEmpty {
+        result.append("Empty")
+    }
+    return result
+}
+
+wordSearch("ap", ["Apple", "banana", "cherry", "mango", "guava"])
+
+
 
