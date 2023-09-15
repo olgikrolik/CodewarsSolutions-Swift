@@ -77,5 +77,49 @@ func wordSearch(_ str:String, _ arr:[String]) -> [String] {
 
 wordSearch("ap", ["Apple", "banana", "cherry", "mango", "guava"])
 
+//Challenge 4
+//We will call a natural number a "doubleton number" if it contains exactly two distinct digits. For example, 23, 35, 100, 12121 are doubleton numbers, and 123 and 9980 are not.
+//For a given natural number n (from 1 to 1 000 000), you need to find the next doubleton number. If n itself is a doubleton, return the next bigger than n.
+
+func doubleton(_ num: Int) -> Int {
+    var n = num
+    while Set(String(n+1)).count != 2 {
+     n+=1
+    }
+    return n+1
+}
+doubleton(10)
+
+//Challlenge 5
+//An ordered sequence of numbers from 1 to N is given. One number might have deleted from it, then the remaining numbers were mixed. Find the number that was deleted.
+//Example:
+//The starting array sequence is [1,2,3,4,5,6,7,8,9]
+//The mixed array with one deleted number is [3,2,4,6,7,8,1,9]
+//Your function should return the int 5.
+//If no number was deleted from the starting array, your function should return the int 0.
+
+func findDeletedNumber(_ array: [Int], _ mixArray: [Int]) -> Int {
+    var arrayToSet = Set(array)
+    let mixArrayToSet = Set(mixArray)
+    let difference = arrayToSet.subtracting(mixArrayToSet).first ?? 0
+    //arrayToSet.subtract(mixArrayToSet)   // inna opcja odejmowania zbiorów(setów), powyżej tworzy się nowy set, tutaj modyfikuje się pierwszy
+    return difference
+    
+//    let difference = arrayToSet.symmetricDifference(mixArrayToSet).first ?? 0  //druga opcja z funkcją .symmetricDifference
+//    return difference
+}
+
+findDeletedNumber([1,2,3,4,5], [2,3,1,5,0])
 
 
+//Challenge 6
+//Write function replaceAll that will replace all occurrences of an item with another.
+//Example: replaceAll [1,2,2] 1 2 -> in list [1,2,2] we replace 1 with 2 to get new list [2,2,2]
+
+func replaceAll<T: Equatable>(array: [T], old: T, new: T) -> [T] {
+    let newArray = array.map { $0 == old ? new : $0 }
+    return newArray
+}
+
+
+replaceAll(array: [1,2,3,4], old: 2, new: 1)
