@@ -201,7 +201,7 @@ strongNumber(145)
 func printerError(_ s: String) -> String {
     let controlStringLenght = s.count
     var errorCount = 0
-    let sToArray = s.compactMap { String($0) }
+    let sToArray = s.map { String($0) }
     for letter in sToArray {
         if letter >= "n" && letter <= "z" {
             errorCount += 1
