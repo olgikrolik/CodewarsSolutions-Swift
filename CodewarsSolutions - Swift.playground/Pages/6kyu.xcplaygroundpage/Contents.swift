@@ -5,8 +5,6 @@ import Foundation
 //Given an array of integers, find the one that appears an odd number of times.
 //There will always be only one integer that appears an odd number of times.
 
-findIt([1, 1, 0, 3, 3, 5, 5, 1, 1])
-
 func findIt(_ seq: [Int]) -> Int {
     var dictionary = [Int: Int]()
     
@@ -24,3 +22,4 @@ func findIt(_ seq: [Int]) -> Int {
     return selectedKeys[0]
 }
 
+findIt([1, 1, 0, 3, 3, 5, 5, 1, 1])
