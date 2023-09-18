@@ -141,4 +141,34 @@ take([1,2,3,5,6,7,9], 4)
 //}
 
 
+//Challenge 11
+//Complete the solution so that it reverses the string passed into it.
+
+func reverse(_ str: String) -> String {
+    let arrayOfString = str.compactMap { String($0) }
+    let reversedString = arrayOfString.reversed()
+    return reversedString.reduce("", +)
+    
+//2 opcja
+//let reversedString = String(str.reversed())
+//return reversedString
+}
+
+reverse("world")
+
+//Challenge 12
+//Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+func evenOrOdd(_ number:Int) -> String {
+    if number % 2 == 0 {
+        return "Even"
+    } else {
+        return "Odd"
+    }
+
+//2 opcja
+// return number % 2 == 0 ? "Even" : "Odd"
+}
+
+evenOrOdd(3)
 
