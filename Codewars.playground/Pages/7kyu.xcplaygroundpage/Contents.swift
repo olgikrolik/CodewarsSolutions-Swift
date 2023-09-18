@@ -1,8 +1,7 @@
 
 import Foundation
 
-//Challenge 1
-//Linked Lists - Append
+//Challenge 1 Linked Lists - Append https://www.codewars.com/kata/55d17ddd6d7868493e000074
 //Write an Append() function which appends one linked list to another. The head of the resulting list should be returned.
 
 class Node {
@@ -34,7 +33,7 @@ func append(_ listA: Node?, _ listB: Node?) -> Node? {
     return headOfListA
 }
 
-//Challenge 2
+//Challenge 2 Disemvowel Trolls https://www.codewars.com/kata/52fba66badcd10859f00097e
 //Trolls are attacking your comment section!
 //A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
 //Your task is to write a function that takes a string and return a new string with all vowels removed.
@@ -50,7 +49,7 @@ func disemvowel(_ s: String) -> String {
 
 disemvowel("Hello there")
 
-//Challenge 3
+//Challenge 3 Partial Word Searching https://www.codewars.com/kata/54b81566cd7f51408300022d
 //Write a method that will search an array of strings for all strings that contain another string, ignoring capitalization. Then return an array of the found strings.
 //The method takes two parameters, the query string and the array of strings to search, and returns an array.
 //If the string isn't contained in any of the strings in the array, the method returns an array containing a single string: "Empty" (or Nothing in Haskell, or "None" in Python and C)
@@ -77,7 +76,7 @@ func wordSearch(_ str:String, _ arr:[String]) -> [String] {
 
 wordSearch("ap", ["Apple", "banana", "cherry", "mango", "guava"])
 
-//Challenge 4
+//Challenge 4 Doubleton number https://www.codewars.com/kata/604287495a72ae00131685c7
 //We will call a natural number a "doubleton number" if it contains exactly two distinct digits. For example, 23, 35, 100, 12121 are doubleton numbers, and 123 and 9980 are not.
 //For a given natural number n (from 1 to 1 000 000), you need to find the next doubleton number. If n itself is a doubleton, return the next bigger than n.
 
@@ -90,7 +89,7 @@ func doubleton(_ num: Int) -> Int {
 }
 doubleton(10)
 
-//Challlenge 5
+//Challlenge 5 Lost number in number sequence https://www.codewars.com/kata/595aa94353e43a8746000120
 //An ordered sequence of numbers from 1 to N is given. One number might have deleted from it, then the remaining numbers were mixed. Find the number that was deleted.
 //Example:
 //The starting array sequence is [1,2,3,4,5,6,7,8,9]
@@ -112,7 +111,7 @@ func findDeletedNumber(_ array: [Int], _ mixArray: [Int]) -> Int {
 findDeletedNumber([1,2,3,4,5], [2,3,1,5,0])
 
 
-//Challenge 6
+//Challenge 6 Replace all items https://www.codewars.com/kata/57ae18c6e298a7a6d5000c7a
 //Write function replaceAll that will replace all occurrences of an item with another.
 //Example: replaceAll [1,2,2] 1 2 -> in list [1,2,2] we replace 1 with 2 to get new list [2,2,2]
 
@@ -124,7 +123,7 @@ func replaceAll<T: Equatable>(array: [T], old: T, new: T) -> [T] {
 
 replaceAll(array: [1,2,3,4], old: 2, new: 1)
 
-//Challenge 7
+//Challenge 7 Sum of two lowest positive integers https://www.codewars.com/kata/558fc85d8fd1938afb000014
 //Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
 //For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
 //[10, 343445353, 3453445, 3453545353453] should return 3453455.
@@ -138,7 +137,7 @@ func sumOfTwoSmallestIntegersIn(_ array: [Int]) -> Int {
 
 sumOfTwoSmallestIntegersIn([3,2,5,1])
 
-//Challenge 8
+//Challenge 8 Odder Than the Rest https://www.codewars.com/kata/5983cba828b2f1fd55000114
 //Create a function oddOne that takes an [Int] as input and outputs the index at which the sole odd number is located.
 //This method should work with arrays with negative numbers. If there are no odd numbers in the array, then the method should output nil.
 
@@ -156,7 +155,7 @@ func oddOne(_ arr: [Int]) -> Int? {
 oddOne([2,4,6,8,2])
 
 
-//Challenge 9
+//Challenge 9 Strong Number (Special Numbers Series #2) https://www.codewars.com/kata/5a4d303f880385399b000001
 //Strong number is the number that the sum of the factorial of its digits is equal to number itself.
 //For example, 145 is strong, since 1! + 4! + 5! = 1 + 24 + 120 = 145.
 //Task
@@ -191,7 +190,7 @@ func strongNumber(_ number: Int) -> String {
 strongNumber(145)
 
 
-//Challenge 10
+//Challenge 10 Printer Errors https://www.codewars.com/kata/56541980fa08ab47a0000040
 //In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
 //The colors used by the printer are recorded in a control string. For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, four times color b, one time color h then one time color a...
 //Sometimes there are problems: lack of colors, technical malfunction and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
